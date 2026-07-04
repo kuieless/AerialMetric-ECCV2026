@@ -28,7 +28,7 @@
 
 ## Full Evaluation Code Release
 
-The complete evaluation code has been organized and will be uploaded after the ECCV final decision is confirmed.
+The complete evaluation codes will be released soon.
 
 
 ## Benchmark Entry Points
