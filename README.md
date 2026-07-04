@@ -26,6 +26,10 @@
 </p>
 </div>
 
+## Full Evaluation Code Release
+
+The complete evaluation code has been organized and will be uploaded after the ECCV final decision is confirmed.
+
 
 ## Benchmark Entry Points
 
