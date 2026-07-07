@@ -104,12 +104,15 @@ bash benchmark.sh 0
 
 The script runs all experiments automatically:
 
-| Experiment | Datasets | Intrinsics | Mask | Models |
-|---|---|---|---|---|
-| 1 | Decoupled + Oblique + Wild | none | load | Baseline + MoGe2-Aerial LoRA |
-| 2 | Decoupled + Oblique (norm) | load | load | Baseline + MoGe2-Aerial LoRA |
-| 3 | Ground ×7 (NYUv2, KITTI, …) | no oracle | — | Baseline + MoGe2-Aerial LoRA |
-| 4 | Ground ×7 | oracle (GT intrinsics) | — | Baseline + MoGe2-Aerial LoRA |
+
+
+| Type          | Experiment | Datasets                    | Intrinsics             | Mask | Models                       |
+| ------------- | ---------: | --------------------------- | ---------------------- | ---- | ---------------------------- |
+| Aerial Scenes |          1 | Decoupled + Oblique + Wild  | none                   | load | Baseline + MoGe2-Aerial LoRA |
+| Aerial Scenes |          2 | Decoupled + Oblique (norm)  | load                   | load | Baseline + MoGe2-Aerial LoRA |
+| Ground Scenes |          3 | Ground ×7 (NYUv2, KITTI, …) | no oracle              | —    | Baseline + MoGe2-Aerial LoRA |
+| Ground Scenes |          4 | Ground ×7                   | oracle (GT intrinsics) | —    | Baseline + MoGe2-Aerial LoRA |
+
 
 Results are saved to `OUTPUT_ROOT` (default: `/data1/szq/622-freash3`) with per-dataset evaluation reports (`.txt` / `.json`).
 
@@ -148,8 +151,8 @@ Output per frame:
 Options: `--resize 1024` (long-edge resize), `--stride 5` (process every 5th video frame), `--device cuda` / `--device cpu`.
 
 Weights:
-- Base: [MoGe-2 ViT-Large](https://huggingface.co/Ruicheng/moge-2-vitl-normal)
-- Aerial LoRA: [AerialMetric-ECCV2026](https://huggingface.co/datasets/Kuiee/AerialMetric-ECCV2026)
+- MoGe2(Baseline): [MoGe-2 ViT-Large](https://huggingface.co/Ruicheng/moge-2-vitl-normal)
+- MoG2-Aerial(LoRA Type): [AerialMetric-ECCV2026](https://huggingface.co/datasets/Kuiee/AerialMetric-ECCV2026)
 
 
 ## Acknowledgments
