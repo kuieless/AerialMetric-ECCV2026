@@ -117,8 +117,8 @@ The script runs all experiments automatically:
 Results are saved to `OUTPUT_ROOT` (default: `/data1/szq/622-freash3`) with per-dataset evaluation reports (`.txt` / `.json`).
 
 Weights:
-- Base: [MoGe-2 ViT-Large](https://huggingface.co/Ruicheng/moge-2-vitl-normal)
-- Aerial LoRA: [AerialMetric-ECCV2026](https://huggingface.co/datasets/Kuiee/AerialMetric-ECCV2026)
+- MoGe2(Baseline): [MoGe-2 ViT-Large](https://huggingface.co/Ruicheng/moge-2-vitl-normal)
+- MoG2-Aerial(LoRA Type): [AerialMetric-ECCV2026](https://huggingface.co/datasets/Kuiee/AerialMetric-ECCV2026)
 
 Dataset layout: see `DATA_ORGANIZATION.md`. Ground config: edit `Ground_MoGe/configs/eval/ground_metric_benchmarks_local.json`.
 
