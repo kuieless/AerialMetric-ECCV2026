@@ -166,8 +166,8 @@ We gratefully acknowledge the following datasets or works for providing raw UAV 
 - **[UrbanBIS](https://vcc.tech/UrbanBIS)** (Yang et al., SIGGRAPH 2023) — benchmark for fine-grained urban building instance segmentation.
 - **[UrbanScene3D](https://vcc.tech/UrbanScene3D/)** (Lin et al., ECCV 2022) — large-scale urban scene dataset with high-resolution aerial images.
 - **[UAVScenes](https://github.com/sijieaaa/UAVScenes)** (Wang et al., ICCV 2025) — multi-modal UAV dataset with frame-wise semantic annotations.
-- **[OpenDroneMap](https://github.com/OpenDroneMap/ODM)** — open-source toolkit for generating maps, point clouds, 3D models, and DEMs from drone images.
-- **[ArcGIS Drone2Map](https://www.esri.com/en-us/arcgis/products/arcgis-reality/products/arcgis-drone2map)** (ESRI) — create 3D products from drone imagery.
+- **[OpenDroneMap](https://opendronemap.org/odm/datasets/)** — open-source toolkit for generating maps, point clouds, 3D models, and DEMs from drone images.
+- **[ArcGIS Drone2Map](https://www.esri.com/zh-cn/arcgis/products/arcgis-reality/resources/sample-drone-datasets)** (ESRI) — create 3D products from drone imagery.
 
 ## Citation
 
