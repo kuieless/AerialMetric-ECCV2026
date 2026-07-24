@@ -195,11 +195,17 @@ Weights:
 - MoG2-Aerial(LoRA Type): [AerialMetric-ECCV2026](https://huggingface.co/datasets/Kuiee/AerialMetric-ECCV2026)
 
 
+
 ## Acknowledgments
 
 ### Models & Tools
 
-- **[MoGe-2](https://github.com/microsoft/MoGe)** (Wang et al., 2025) — the core monocular geometry estimation model.
+- **[MoGe-2](https://github.com/microsoft/MoGe)** (Wang et al., 2025) — the core monocular geometry estimation model used in this work.
+- **[Gemini](https://deepmind.google/models/gemini/)** and **[Depth Anything 3](https://depth-anything-3.github.io/)** — used to assist in the construction and processing of the AerialMetric-Wild subset.
+- **[DJI Terra](https://enterprise.dji.com/dji-terra)** — the primary software used for aerial photogrammetric reconstruction and geometric data processing.
+- **[UniDepthV2](https://github.com/lpiccinelli-eth/UniDepth)** (Piccinelli et al., 2025) — used to evaluate the cross-architecture generalization of models adapted using AerialMetric.
+
+
 
 ### Oblique：Data Sources
 
