@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+# Local outputs and large model files
+eval_output*/
+outputs/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Local datasets
+data/

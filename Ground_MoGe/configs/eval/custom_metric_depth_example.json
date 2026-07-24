@@ -1,0 +1,15 @@
+{
+    "Wild": {
+        "loader": "wild",
+        "path": "/data1/szq/Val/Wild",
+        "image_dir": "image",
+        "depth_dir": "depth",
+        "metadata_file": "metadata_full.csv",
+        "depth_unit": 1.0,
+        "eval_depth_min": 0.001,
+        "eval_depth_max": 800.0,
+        "require_pred_valid": true,
+        "clip_pred_to_eval_range": true,
+        "min_valid_pixels": 10
+    }
+}

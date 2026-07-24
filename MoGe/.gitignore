@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# Model weights & checkpoints
+*.pt
+*.bin
+*.safetensors
+*.pth
+checkpoints/
+
+# Experiment outputs
+_norelease/
+eval_output/
+mlruns/
+output/
+workspace/
+offline_config_proxy/
+data/
+log/
+wandb/
+
+# Local release-prep notes
+README.md
+INFERENCE_EVAL_PIPELINE.md
+PROGRESS.md
+configs/Final_train/train.markdown
+
+# Non-release configs
+configs/norelease/
+configs/GAU-train/
+configs/lora/
+
+# Non-release scripts
+moge/scripts/code-infer-eval-self/
+moge/scripts/code-sh/
+moge/scripts/temp_video_inference/
+moge/scripts/my_results/
+moge/scripts/vis_comparison_results/
+moge/scripts/code-final/batch/
+
+# Image/plot artifacts in scripts (keep only code)
+moge/scripts/*.png
+moge/scripts/*.txt
+moge/scripts/*.sh
+
+# IDE
+.vscode/
+.idea/

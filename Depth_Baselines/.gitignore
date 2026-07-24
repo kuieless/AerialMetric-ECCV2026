@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Local checkpoints and outputs
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+outputs/
+eval_output*/
+runs/
+wandb/
+
+# Local datasets and downloaded assets
+data/
+datasets/

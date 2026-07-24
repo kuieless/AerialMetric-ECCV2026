@@ -1,0 +1,49 @@
+# AerialMetric / MoGe 环境依赖
+#
+# 安装说明：
+#   conda create -n moge310 python=3.10 -y
+#   conda activate moge310
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+#   pip install -r requirements.txt
+#   pip install -e MoGe/
+
+# ---------- 核心数值/科学计算 ----------
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+
+# ---------- 图像与可视化 ----------
+opencv-python>=4.8
+pillow>=10.0
+matplotlib>=3.7
+seaborn>=0.12
+
+# ---------- PyTorch 生态 (torch 请按上方说明单独安装) ----------
+# torch>=2.0
+# torchvision
+safetensors>=0.4
+accelerate>=0.20
+filelock
+sympy
+
+# ---------- MoGe 运行时 ----------
+click>=8.0
+huggingface_hub>=0.20
+trimesh>=4.0
+gradio>=4.0
+tqdm>=4.60
+PyYAML>=6.0
+requests>=2.28
+Jinja2>=3.1
+typing_extensions>=4.0
+
+# ---------- LoRA Fine-tuning ----------
+peft>=0.10
+transformers>=4.40
+
+# ---------- 评估 ----------
+scikit-learn>=1.3
+
+# ---------- 第三方几何库 (GitHub) ----------
+utils3d @ git+https://github.com/EasternJournalist/utils3d.git
+pipeline @ git+https://github.com/EasternJournalist/pipeline.git

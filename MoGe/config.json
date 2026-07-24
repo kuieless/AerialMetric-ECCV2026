@@ -1,0 +1,9 @@
+{
+  "architectures": [
+    "MoGeModel"
+  ],
+  "model_type": "moge",
+  "backbone": "vit_large_patch14_dinov2",
+  "backbone_type": "timm",
+  "transformers_version": "4.35.2"
+}

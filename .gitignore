@@ -1,0 +1,21 @@
+# Local papers and side projects
+*.pdf
+/UniDepth/
+MoGe_ground/
+md
+
+# Legacy local experiment utilities and generated tables
+1
+Acodes/
+DJI-self2-final/
+environment.yml
+final_merged.csv
+fov_stats.csv
+.DS_Store
+**/.DS_Store
+demo_output/
+__pycache__/
+*.pyc
+
+# Keep private final training configurations out of the public repository.
+/MoGe/configs/Final_train/

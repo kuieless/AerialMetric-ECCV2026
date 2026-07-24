@@ -122,33 +122,72 @@ Weights:
 
 Dataset layout: see `DATA_ORGANIZATION.md`. Ground config: edit `Ground_MoGe/configs/eval/ground_metric_benchmarks_local.json`.
 
-## Quick Demo — Single Image / Video Inference
+## Quick Demo — Single Image / Video / Folder Inference
 
 ```bash
-# Base model
+# Base model (single image)
 python demo_infer.py \
   --input photo.jpg \
   --model vitl \
   --checkpoint /path/to/vitl-normal.pt \
   --output ./demo_output
 
-# Aerial LoRA model
+# Aerial LoRA model (video, every 5th frame)
 python demo_infer.py \
   --input video.mp4 \
   --model lora \
   --checkpoint /path/to/Moge2-Aerial.pt \
   --lora_config MoGe/configs/Final_train/config-lora-all.json \
-  --output ./demo_output
+  --output ./demo_output \
+  --stride 5
+
+# Full options example
+python demo_infer.py \
+  --input ./images/ \
+  --model lora \
+  --checkpoint /path/to/Moge2-Aerial.pt \
+  --lora_config MoGe/configs/Final_train/config-lora-all.json \
+  --output ./demo_output \
+  --resize 1024 \
+  --resolution_level 9 \
+  --cmap inferno \
+  --save_components
 ```
 
-Output per frame:
-| File | Description |
-|------|-------------|
-| `*_depth.npy` | Raw depth array (float32) |
-| `*_depth_vis.png` | Jet colormap visualization |
-| `*_colorbar.png` | Depth scale bar |
+### CLI Reference
 
-Options: `--resize 1024` (long-edge resize), `--stride 5` (process every 5th video frame), `--device cuda` / `--device cpu`.
+| Category | Argument | Default | Description |
+|---|---|---|---|
+| **Required** | `--input` | — | Image / video / folder path |
+| | `--model` | — | `vitl` (base) or `lora` (LoRA fine-tuned) |
+| | `--checkpoint` | — | Path to `.pt` checkpoint |
+| **LoRA** | `--lora_config` | — | LoRA config JSON (required for `--model lora`) |
+| | `--lora_rank` | 96 | LoRA rank |
+| **Inference** | `--resize` | 0 | Long-edge resize target (0=original). Padded to ×14 |
+| | `--resolution_level` | 9 | MoGe2 quality/speed: 0 (fastest) ~ 9 (best) |
+| | `--force_projection` | on | Recompute point map from depth for consistency |
+| | `--apply_mask` | on | Mask invalid depth regions |
+| | `--fov_x` | auto | Override horizontal FoV (degrees), auto-estimate if omitted |
+| | `--device` | cuda | `cuda` / `cpu` |
+| | `--fp16` / `--no_fp16` | on | FP16 inference |
+| **Output** | `--output` | `./demo_output` | Output directory |
+| | `--save_npy` / `--no_npy` | on | Save raw `.npy` depth array |
+| | `--save_components` | off | Also save standalone `_depth_vis.png` |
+| **Visualization** | `--cmap` | jet | Colormap: `jet` / `inferno` / `plasma` / `viridis` / `turbo` |
+| | `--vmin` / `--vmax` | auto | Depth range clamp for colormap |
+| | `--seed` | 42 | Random seed for point picking |
+| | `--point_margin` | 20 | Edge margin for point sampling |
+| **Video** | `--stride` | 1 | Process every N-th frame |
+
+### Output per frame
+
+| File | Description |
+|---|---|
+| `*_depth.npy` | Raw float32 depth array |
+| `*_depth_annotated.png` | **Composite**: depth colormap + 2 random point depth markers + colorbar |
+| `*_colorbar.png` | Standalone depth scale bar |
+| `*_meta.json` | Per-frame metadata (see below) |
+
 
 Weights:
 - MoGe2(Baseline): [MoGe-2 ViT-Large](https://huggingface.co/Ruicheng/moge-2-vitl-normal)
