@@ -27,8 +27,9 @@
 </div>
 
 ## News
+- ✅ **2026-07-24:** The code repository is now publicly available and includes both inference and benchmark scripts.
+- 🎉 **2026-06-18:** AerialMetric was accepted to ECCV 2026.
 
-✅ 26-7-24：The code repository is now publicly available and includes both inference and benchmark scripts.
 
 
 ## Benchmark Entry Points
