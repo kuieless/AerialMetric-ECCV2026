@@ -28,7 +28,7 @@
 
 ## News
 
-✅ The code repository is now publicly available and includes both inference and benchmark scripts.
+✅ 26-7-24：The code repository is now publicly available and includes both inference and benchmark scripts.
 
 
 ## Benchmark Entry Points
