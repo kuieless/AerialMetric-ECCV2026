@@ -26,9 +26,9 @@
 </p>
 </div>
 
-## Full Evaluation Code Release
+## News
 
-The complete evaluation codes will be released soon.
+✅ The code repository is now publicly available and includes both inference and benchmark scripts.
 
 
 ## Benchmark Entry Points
